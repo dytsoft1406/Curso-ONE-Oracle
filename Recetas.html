@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var encontro = false;
+        for (var pos =0; pos < ingredientes.length;pos++){
+        	if (ingrediente == ingredientes[pos]){
+        		encontro = true ;
+        		alert("Ya ingreso ese ingrediente! elija otro!!");
+        		break ;
+        	}
+
+        }//fin for
+        if (encontro==false){
+			ingredientes.push(ingrediente);
+        	contador++;        	
+        }
+
+    }
+
+    console.log(ingredientes);
+
+
+</script>
+
+ 

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - JUEGO DE ADIVINACION</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+	function sortea(nro){
+		return (Math.round(Math.random()*nro));
+	}
+	var nroPensado = sortea(10);
+	var nroLanzado = parseInt(prompt("Adivine la loteria ingresando un valor"));
+
+	if (nroLanzado == nroPensado){
+		imprimir("Se ha ganado la loteria");
+	} else {
+		if (nroLanzado < nroPensado){
+			imprimir("el numero de robot es mayor que el tuyo " + nroPensado);
+		} else {
+			imprimir("el numero del robot es menor que el tuyo "+nroPensado);
+		}
+	}
+
+
+</script>
+
+

@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - JUEGO DE ADIVINACION</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	var numero_pensado = Math.round(Math.random()*10) ;
+	alert("Hola mi nombre es Carlos Gimenez!! Bienvenido a mi nuevo juego..");
+	var nombre = prompt("Por favor ingrese su nombre para continuar!!");
+
+
+
+	var intentos = parseInt(prompt("En cuantos intentos cree usted que puede adivinar???")) ;
+	var contador = 1 ;
+
+	while (contador <= intentos){
+		var nro_lanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+		if (numero_pensado == nro_lanzado) {
+			alert("Genial "+nombre+" Usted acerto, en el intento "+contador+ " el numero pensado era "+ numero_pensado);
+			break;
+		} else {
+			alert("Incorrecto") ;
+		}
+		contador++;
+	}
+
+	if (numero_pensado == nro_lanzado) {
+			imprimir("Genial "+nombre+" Usted acerto, en el intento "+contador+ " el numero pensado era "+ numero_pensado);
+		} else {
+			imprimir("Lo siento "+nombre+" el nro es incorrecto.. El numero pensado era "+ numero_pensado+", la proxima pruebo con mas intentos") ;
+		}
+
+
+
+</script>
+
+
